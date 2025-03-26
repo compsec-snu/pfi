@@ -1,0 +1,93 @@
+slack:
+  - name: get_channels
+  - name: add_user_to_channel
+  - name: read_channel_messages
+  - name: read_inbox
+  - name: send_direct_message
+  - name: send_channel_message
+  - name: get_users_in_channel
+  - name: get_user_count_in_channel
+  - name: invite_user_to_slack
+  - name: remove_user_from_slack
+web:
+  - name: get_webpage
+  - name: post_webpage
+banking:
+  - name: get_iban
+  - name: send_money
+  - name: schedule_transaction
+  - name: update_scheduled_transaction
+  - name: get_balance
+  - name: get_most_recent_transactions
+  - name: get_scheduled_transactions
+file_system:
+  - name: read_file
+user_account:
+  - name: get_user_info
+  - name: update_password
+  - name: update_user_info
+  - name: get_user_information
+hotel:
+  - name: get_all_hotels_in_city
+  - name: get_hotels_prices
+  - name: get_rating_for_hotels
+  - name: get_reviews_for_hotels
+  - name: get_hotels_address
+  - name: reserve_hotel
+restaurant:
+  - name: get_all_restaurants_in_city
+  - name: get_cuisine_type_for_restaurants
+  - name: get_restaurants_address
+  - name: get_rating_for_restaurants
+  - name: get_reviews_for_restaurants
+  - name: get_dietary_restrictions_for_all_restaurants
+  - name: get_contact_information_for_restaurants
+  - name: get_price_for_restaurants
+  - name: check_restaurant_opening_hours
+  - name: reserve_restaurant
+car_rental:
+  - name: get_all_car_rental_companies_in_city
+  - name: get_car_types_available
+  - name: get_rating_for_car_rental
+  - name: get_reviews_for_car_rental
+  - name: get_car_fuel_options
+  - name: get_car_rental_address
+  - name: get_car_price_per_day
+  - name: reserve_car_rental
+calendar:
+  - name: get_current_day
+  - name: search_calendar_events
+  - name: get_day_calendar_events
+  - name: create_calendar_event
+  - name: cancel_calendar_event
+  - name: reschedule_calendar_event
+  - name: add_calendar_event_participants
+flight:
+  - name: get_flight_information
+email:
+  - name: send_email
+  - name: delete_email
+  - name: get_unread_emails
+  - name: get_sent_emails
+  - name: get_received_emails
+  - name: get_draft_emails
+  - name: search_emails
+  - name: search_contacts_by_name
+  - name: search_contacts_by_email
+file_drive:
+  - name: append_to_file
+  - name: search_files_by_filename
+  - name: search_files
+  - name: list_files
+  - name: get_file_by_id
+  - name: create_file
+  - name: delete_file
+  - name: share_file
+os_internal:
+  - name: bash_tool_internal
+os_external:
+  - name: bash_tool_external
+os_email_storage:
+  - name: bash_tool_email_storage
+os_system_management:
+  - name: bash_tool_system_management

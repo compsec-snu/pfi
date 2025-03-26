@@ -1,0 +1,21 @@
+# Allowing all the permissions
+# TrustedAgent:
+#   - get_iban
+#   - send_money
+#   - schedule_transaction
+#   - update_scheduled_transaction
+#   - get_balance
+#   - get_most_recent_transactions
+#   - get_scheduled_transactions
+#   - read_file
+#   - get_user_info
+#   - update_password
+#   - update_user_info
+
+# Unprivileged plugins (None)
+UntrustedAgent:
+
+Attributes:
+  - iban:me t
+  - iban:DE89370400440532013000 t
+  - iban:GB29NWBK60161331926819 u

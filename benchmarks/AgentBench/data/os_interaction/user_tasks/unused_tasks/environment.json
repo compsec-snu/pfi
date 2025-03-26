@@ -1,0 +1,30 @@
+[
+    {
+        "description": "Tell me how many files can be executed in PATH.",
+        "evaluation": {
+            "check": [
+                null,
+                {
+                    "language": "python",
+                    "file": "check/integer-match.py"
+                }
+            ],
+            "example": "find $(echo $PATH | tr ':' ' ') -type f -executable | wc -l"
+        },
+        "labels": ["environment"]
+    },
+    {
+        "description": "Tell me how many files can be executed directly no matter where my work dir is.",
+        "evaluation": {
+            "check": [
+                null,
+                {
+                    "language": "python",
+                    "file": "check/integer-match.py"
+                }
+            ],
+            "example": "find $(echo $PATH | tr ':' ' ') -type f -executable | wc -l"
+        },
+        "labels": ["environment"]
+    }
+]

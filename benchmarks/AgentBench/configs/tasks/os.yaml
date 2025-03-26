@@ -1,0 +1,268 @@
+os-no_injection-explicit_control_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-no_injection-explicit_control_flow"
+    attack_type: "no_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_control_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "no-injection"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-no_injection-implicit_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-no_injection-implicit_flow"
+    attack_type: "no_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/implicit_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "no-injection"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-no_injection-explicit_data_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-no_injection-explicit_data_flow"
+    attack_type: "no_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_data_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "no-injection"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-prompt_injection-explicit_control_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-prompt_injection-explicit_control_flow"
+    attack_type: "prompt_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_control_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "prompt_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/prompt_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-prompt_injection-implicit_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-prompt_injection-implicit_flow"
+    attack_type: "prompt_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/implicit_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "prompt_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/prompt_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-prompt_injection-explicit_data_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-prompt_injection-explicit_data_flow"
+    attack_type: "prompt_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_data_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "prompt_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/prompt_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-data_injection-implicit_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-data_injection-implicit_flow"
+    attack_type: "data_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/implicit_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "data_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/data_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-data_injection-explicit_data_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-malicious_env-explicit_data_flow"
+    attack_type: "data_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_data_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "data_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/data_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-data_injection-explicit_control_flow:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-malicious_env-explicit_control_flow"
+    attack_type: "data_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/explicit_control_flow_tasks/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "data_injection"
+
+    injection_tasks: "data/os_interaction/injection_tasks/data_injection/*.json"
+    
+    bk: [ ]
+    ignore: [ ]
+
+os-prompt_injection-as_user_task:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-injection-task"
+    attack_type: "no_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/injection_tasks/prompt_injection/*.json
+          script_dir: data/os_interaction/scripts/injection_tasks/
+          index_prefix: "injection_task_as_user_task"
+  
+    bk: [ ]
+    ignore: [ ]
+
+os-debug:
+  module: "src.server.tasks.os_interaction.OSInteraction"
+  parameters:
+    name: "os-debug"
+    attack_type: "no_injection"
+    concurrency: 1
+    round_limit: 8
+
+    docker_config:
+      localhost: local-os
+      directory: data/os_interaction/res/dockerfiles
+
+    scripts:
+      directory: data/os_interaction/res/scripts
+
+    data_config:
+      files:
+        - user_tasks: data/os_interaction/user_tasks/debug/*.json
+          script_dir: data/os_interaction/scripts/user_tasks/
+          index_prefix: "debug"
+      bk: [ ]
+      ignore: [ ]
+
+    injection_tasks: "data/os_interaction/injection_tasks/debug/*.json"
+    

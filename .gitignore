@@ -1,0 +1,4 @@
+agentbench_result/
+agentdojo_result/
+__pycache__/
+*.py[cod]

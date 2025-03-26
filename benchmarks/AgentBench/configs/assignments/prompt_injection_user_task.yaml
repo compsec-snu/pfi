@@ -1,0 +1,15 @@
+import: definition.yaml
+
+concurrency:
+  task:
+    os-prompt_injection-as_user_task: 1
+  agent:
+    gpt-4o-2024-05-13: 1
+
+assignments: # List[Assignment] | Assignment
+  - agent: # "task": List[str] | str ,  "agent": List[str] | str
+      - gpt-4o-2024-05-13
+    task:
+      - os-prompt_injection-as_user_task
+
+output: "outputs/{TIMESTAMP}"

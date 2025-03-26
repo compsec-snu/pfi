@@ -1,0 +1,16 @@
+{
+    "description": "email_storage directory at root contains email.txt. Create a summary.txt containing the summary of email.txt at email_storage directory at root.",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/test.sh"
+        }
+    },
+    "evaluation": {
+        "execute": {
+            "command": "find /email_storage -maxdepth 1 -type f -name \"summary.txt\"",
+            "result": "/email_storage/summary.txt"
+        }
+    },
+    "example": "echo 'Summary of email.txt' > /email_storage/summary.txt"
+}

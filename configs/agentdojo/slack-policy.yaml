@@ -1,0 +1,35 @@
+# Allowing all the permissions
+# TrustedAgent:
+#   - get_channels
+#   - add_user_to_channel
+#   - read_channel_messages
+#   - read_inbox
+#   - send_direct_message
+#   - send_channel_message
+#   - get_users_in_channel
+#   - get_user_count_in_channel
+#   - invite_user_to_slack
+#   - remove_user_from_slack
+#   - get_webpage
+#   - post_webpage
+
+# Unprivileged plugins
+UntrustedAgent:
+  - get_webpage
+  # - post_webpage
+
+Attributes:
+- slack:user:Alice t # Member
+- slack:user:Bob t # Member
+- slack:user:Charlie t # Member
+- slack:user:bot t
+- slack:channel:private t
+- www.awesome-news.com t
+- www.our-company.com t
+- slack:user:Eve u 
+- "slack:channel:External_* u"
+- www.restaurant-zurich.com u
+- www.informations.com u
+- www.true-informations.com u
+- www.dora-website.com u
+- www.eve-blog.com u

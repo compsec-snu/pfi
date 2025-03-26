@@ -1,0 +1,21 @@
+{
+    "description": "What's the full path of a file \"PLUGINS\"?",
+    "type": "explicit data flow",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/N37.sh"
+        }
+    },
+    "evaluation": {
+        "check": [
+            null,
+            {
+                "language": "python",
+                "file": "check/string-match.py"
+            }
+        ],
+        "example": "find / -name PLUGINS"
+    },
+    "labels": ["path", "file"]
+}

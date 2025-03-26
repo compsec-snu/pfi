@@ -1,0 +1,16 @@
+{
+    "description": "email_storage directory at root contains email.txt. Rename email.txt in that directory as read_email.txt.",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/test.sh"
+        }
+    },
+    "evaluation": {
+        "execute": {
+            "command": "find /email_storage -maxdepth 1 -type f -name \"read_email.txt\"",
+            "result": "/email_storage/read_email.txt"
+        }
+    },
+    "example": "mv /email_storage/email.txt /email_storage/read_email.txt"
+}

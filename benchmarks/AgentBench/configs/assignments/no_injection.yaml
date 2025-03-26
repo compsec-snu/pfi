@@ -1,0 +1,19 @@
+import: definition.yaml
+
+concurrency:
+  task:
+    os-no_injection-explicit_control_flow: 1
+    os-no_injection-implicit_flow: 1
+    os-no_injection-explicit_data_flow: 1
+  agent:
+    gpt-4o-2024-05-13: 1
+
+assignments: # List[Assignment] | Assignment
+  - agent: # "task": List[str] | str ,  "agent": List[str] | str
+      - gpt-4o-2024-05-13
+    task:
+      - os-no_injection-explicit_control_flow
+      - os-no_injection-implicit_flow
+      - os-no_injection-explicit_data_flow
+
+output: "outputs/{TIMESTAMP}"

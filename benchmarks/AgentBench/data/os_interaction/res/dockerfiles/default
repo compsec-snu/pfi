@@ -1,0 +1,31 @@
+FROM ubuntu
+
+# Install basic packages & apparmor
+RUN apt update && \
+    apt install -y --no-install-recommends \
+    python3 python3-pip git vim curl wget unzip zip tree \
+    build-essential clang protobuf-compiler libprotobuf-dev \
+    pkg-config flex bison \
+    libnl-3-dev libnl-genl-3-dev libnl-route-3-dev \
+    apparmor apparmor-utils && \
+    apt clean && rm -rf /var/lib/apt/lists/*
+
+RUN echo 'profile trusted-agent {' > /etc/apparmor.d/trusted-agent && \
+    echo '    file,' >> /etc/apparmor.d/trusted-agent && \
+    echo '    capability,' >> /etc/apparmor.d/trusted-agent && \
+    echo '    signal,' >> /etc/apparmor.d/trusted-agent && \
+    echo '    mount,' >> /etc/apparmor.d/trusted-agent && \
+    echo '    umount,' >> /etc/apparmor.d/trusted-agent && \
+    echo '' >> /etc/apparmor.d/trusted-agent && \
+    echo '    audit /external/ r,' >> /etc/apparmor.d/trusted-agent && \
+    echo '    audit /external/** r,' >> /etc/apparmor.d/trusted-agent && \
+    echo '}' >> /etc/apparmor.d/trusted-agent
+
+RUN git clone https://github.com/google/nsjail.git /nsjail && \
+    cd /nsjail && \
+    export CFLAGS="-I/usr/include/libnl3" && \
+    export LDFLAGS="-L/usr/lib/x86_64-linux-gnu" && \
+    make && \
+    ln -s /nsjail/nsjail /usr/local/bin/nsjail
+
+CMD ["bash"]

@@ -1,0 +1,67 @@
+# Allowing all the permissions
+# TrustedAgent:
+#   # User functions
+#   - get_user_information
+#   # Hotel functions
+#   - get_all_hotels_in_city
+#   - get_hotels_prices
+#   - get_rating_reviews_for_hotels
+#   - get_hotels_address
+#   # Restaurant functions
+#   - get_all_restaurants_in_city
+#   - get_cuisine_type_for_restaurants
+#   - get_restaurants_address
+#   - get_rating_reviews_for_restaurants
+#   - get_dietary_restrictions_for_all_restaurants
+#   - get_contact_information_for_restaurants
+#   - get_price_for_restaurants
+#   - check_restaurant_opening_hours
+#   # Car rental functions
+#   - get_all_car_rental_companies_in_city
+#   - get_car_types_available
+#   - get_rating_reviews_for_car_rental
+#   - get_car_fuel_options
+#   - get_car_rental_address
+#   - get_car_price_per_day
+#   # Calendar functions
+#   - create_calendar_event
+#   - search_calendar_events
+#   - get_day_calendar_events
+#   - cancel_calendar_event
+#   # For making a reservation
+#   - reserve_hotel
+#   - reserve_car_rental
+#   - reserve_restaurant
+#   # For getting flights
+#   - get_flight_information
+#   # For sending emails
+#   - send_email
+
+# Unprivileged plugins
+UntrustedAgent:
+  # Hotel functions
+  - get_all_hotels_in_city
+  - get_hotels_prices
+  - get_rating_for_hotels
+  - get_reviews_for_hotels
+  - get_hotels_address
+  # Restaurant functions
+  - get_all_restaurants_in_city
+  - get_cuisine_type_for_restaurants
+  - get_restaurants_address
+  - get_rating_for_restaurants
+  - get_reviews_for_restaurants
+  - get_dietary_restrictions_for_all_restaurants
+  - get_contact_information_for_restaurants
+  - get_price_for_restaurants
+  - check_restaurant_opening_hours
+  # Car rental functions
+  - get_all_car_rental_companies_in_city
+  - get_car_types_available
+  - get_rating_for_car_rental
+  - get_reviews_for_car_rental
+  - get_car_fuel_options
+  - get_car_rental_address
+  - get_car_price_per_day
+  # For getting flights
+  - get_flight_information

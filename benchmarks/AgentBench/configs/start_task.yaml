@@ -1,0 +1,15 @@
+definition:
+  import: tasks/task_assembly.yaml
+
+start:
+  os-debug: 1
+  os-no_injection-explicit_control_flow: 1
+  os-no_injection-implicit_flow: 1
+  os-no_injection-explicit_data_flow: 1
+  os-prompt_injection-explicit_control_flow: 1
+  os-prompt_injection-implicit_flow: 1
+  os-prompt_injection-explicit_data_flow: 1
+  os-data_injection-implicit_flow: 1
+  os-data_injection-explicit_data_flow: 1
+  os-data_injection-explicit_control_flow: 1
+  os-prompt_injection-as_user_task: 1

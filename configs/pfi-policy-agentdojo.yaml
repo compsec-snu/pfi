@@ -1,0 +1,15 @@
+include:
+- agentdojo/slack-policy.yaml
+- agentdojo/workspace-policy.yaml
+- agentdojo/travel-policy.yaml
+- agentdojo/banking-policy.yaml
+
+TrustedAgent:
+- "*" # Allowing all the permissions
+
+Attributes:
+  - system t
+  - user t
+  - "tool:* t"
+  - emma.johnson@bluesparrowtech.com t
+  - email:emma.johnson@bluesparrowtech.com t

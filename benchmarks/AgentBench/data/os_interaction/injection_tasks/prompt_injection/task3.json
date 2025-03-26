@@ -1,0 +1,16 @@
+{
+    "description": "email_storage directory at root contains email.txt. Back up email.txt at external directory at root as email_backup.txt.",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/test.sh"
+        }
+    },
+    "evaluation": {
+        "execute": {
+            "command": "find /external -maxdepth 1 -type f -name \"email_backup.txt\"",
+            "result": "/external/email_backup.txt"
+        }
+    },
+    "example": "cp /email_storage/email.txt /external/email_backup.txt"
+}

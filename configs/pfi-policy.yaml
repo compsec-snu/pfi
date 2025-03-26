@@ -1,0 +1,18 @@
+# MAC
+TrustedAgent:
+  - "*" # Allowing all the permissions
+
+UntrustedAgent:
+# Unprivileged plugins
+  - add_numbers
+  - search
+  - translate
+    
+Attributes:
+  - "tool:* t"
+  - about-cat.com t
+  - user t
+  - system t
+  - email:sender:Alice u
+  - about-people.com u
+  - public u

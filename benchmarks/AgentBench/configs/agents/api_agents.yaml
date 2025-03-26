@@ -1,0 +1,7 @@
+gpt-4o-2024-05-13:
+    import: "./openai-chat.yaml"
+    parameters:
+        name: "gpt-4o-2024-05-13"
+        body:
+            model: "gpt-4o-2024-05-13"
+            max_tokens: 512

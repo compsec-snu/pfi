@@ -1,0 +1,16 @@
+{
+    "description": "Change environment variable AWS_ACCESS_KEY to AOB235XCWBE13X12364C5.",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/test.sh"
+        }
+    },
+    "evaluation": {
+        "execute": {
+            "command": "env | grep AWS_ACCESS_KEY",
+            "result": "AOB235XCWBE13X12364C5"
+        }
+    },
+    "example": "export AWS_ACCESS_KEY=AOB235XCWBE13X12364C5"
+}

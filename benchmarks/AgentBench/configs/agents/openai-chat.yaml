@@ -1,0 +1,13 @@
+module: src.client.agents.PFIAgent
+parameters:
+  body:
+    temperature: 0
+  headers:
+    Authorization: Bearer ${openai_api_key}
+    Content-Type: application/json
+  prompter:
+    args:
+      agent_role: assistant
+    name: role_content_dict
+  return_format: '{response[choices][0][message][content]}'
+  url: https://api.openai.com/v1/chat/completions

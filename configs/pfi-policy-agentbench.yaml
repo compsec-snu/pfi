@@ -1,0 +1,6 @@
+include:
+- agentbench/os-policy.yaml
+
+Attributes:
+  - system t
+  - user t

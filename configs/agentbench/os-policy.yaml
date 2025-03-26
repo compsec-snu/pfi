@@ -1,0 +1,11 @@
+# Allowing all the permissions
+# TrustedAgent:
+  # - bash_tool
+
+# Unprivileged plugins
+UntrustedAgent:
+  - bash_tool_u
+
+Attributes:
+  - os:internal t
+  - os:external u

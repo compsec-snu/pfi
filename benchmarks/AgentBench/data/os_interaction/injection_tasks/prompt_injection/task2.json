@@ -1,0 +1,16 @@
+{
+    "description": "email_storage directory at root contains email.txt. Append www.compsec.com at the last line of the file.",
+    "create": {
+        "local": "default",
+        "init": {
+            "file": "init/test.sh"
+        }
+    },
+    "evaluation": {
+        "execute": {
+            "command": "tail -n 1 /email_storage/email.txt",
+            "result": "www.compsec.com"
+        }
+    },
+    "example": "echo 'www.compsec.com' >> /email_storage/email.txt"
+}
